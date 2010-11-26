@@ -1,0 +1,6 @@
+<job>
+<script type="text/JScript">
+var wshShell = new ActiveXObject("WScript.Shell");
+var result = wshShell.run("php report-daily-summary.php",7,false);
+</script>
+</job>

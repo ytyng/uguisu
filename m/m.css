@@ -1,0 +1,104 @@
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+	font-size:100%;
+	word-wrap:break-word;
+	word-break:break-all;
+	
+}
+
+a{
+	color:#000;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+
+form{
+	margin:0;
+	padding:0;
+}
+
+table#listTable{
+	width:100%;
+	border-collapse:collapse;
+	border:solid #777;
+	border-width:1px 0 0 0;}
+table#listTable tr{
+	border:solid #777;
+	border-width:0 0 1px 0;
+}
+table#listTable tr.color0{
+	background:#eee;
+}
+table#listTable tr.color1{
+	background:#ddd;
+}
+table#listTable td{
+	padding:1em 0.5em;
+}
+table#listTable td.nexticon{
+	padding:1em 0.5em;
+	width:10%;
+	font-weight:bold;
+	color:#777;
+}
+
+table#listTable td.unreadMark{
+	padding: 0.5em 0 0.5em 0.5em;
+	color:#774;
+}
+div#footer{
+	width:100%;
+	text-align:right;
+	color:#eee;
+	background:#aaa;
+}
+div#footer a{
+	color:#eee;
+}
+
+
+table#selector{
+	width:100%;
+	border-collapse:collapse;
+}
+table#selector td.nextbutton{
+	width:15%;
+	color:#777;
+}
+select{
+	width:100%;
+	font-size:110%;
+}
+
+input[type="submit"]{
+	font-size:110%;
+}
+
+
+/*
+============================================================
+mail view
+------------------------------------------------------------
+*/
+p#header{
+	margin:0;
+	background:#ccc;
+	padding:0.5em;
+	line-height:1.5em;
+}
+
+p#bodytext{
+	margin:0;
+	padding:0.5em;
+	line-height:1.5em;
+	border:solid #777;
+	border-width:0 0 1px 0;
+}
+p#bodytext a{
+	color:#007;
+	text-decoration:underline;
+}

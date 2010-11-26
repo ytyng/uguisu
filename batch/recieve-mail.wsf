@@ -1,0 +1,33 @@
+<job id="UguisuRecieveMail">
+<script type="text/JScript">
+
+var a = [
+
+	"Uguisu用メール巡回プログラム",
+	"起動すると、Windowsに常駐して一定時間ごとにチェックを行います。",
+	"タスクトレイに表示されません。",
+	"起動を確認したり、終了させる場合はタスクマネージャを使ってください。",
+	"多重起動にご注意ください。",
+	"",
+	"今後このメッセージを表示しないようにするには、",
+	"recieve-mail.wsfをエディタで開いて直接編集してください。"
+];
+
+var SLEEP_MINUTE = 9; //ポーリング間隔 (分)
+
+//▼起動時コメントを表示しないようにするには、ここをコメントアウト
+WScript.echo(a.join("\n"));
+
+var wshShell = new ActiveXObject("WScript.Shell");
+
+var sleepMs = 1000 * 60 * SLEEP_MINUTE;
+
+while(true){
+	wshShell.run("php recieve-mail.php",7,false);
+	//wshShell.run("php-win.exe recieve-mail.php",7,false);
+	//WScript.echo("メールの受信を完了しました");
+	WScript.sleep(sleepMs);
+}
+
+</script>
+</job>
