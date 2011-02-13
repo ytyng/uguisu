@@ -107,12 +107,18 @@ class UguisuMailView{
 	 * 自動リンク
 	 */
 	public static function autoLink($text){
-		$text = ereg_replace(
-			"(https?|ftp)(://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)",
+		// Deplicated
+		//$text = ereg_replace(
+		//	"(https?|ftp)(://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)",
+		//	"<a class=\"autolink\" href=\"\\1\\2\" target=\"_blank\">\\1\\2</a>",
+		//	$text
+		//);
+		$result = preg_replace(
+			"/(https?|ftp)(\:\/\/[\w\+\$\;\?\.\%\,\!\#\~\*\/\:\@\&\=\_\-]+)/",
 			"<a class=\"autolink\" href=\"\\1\\2\" target=\"_blank\">\\1\\2</a>",
 			$text
 		);
-		return $text;
+		return $result;
 	}
 	
 	

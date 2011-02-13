@@ -20,7 +20,6 @@ if($CONFIG['debugLevel'] >= 1){
 	echo "</pre>\n";
 }
 ?>	
-</pre>
 <?php Logger::output($CONFIG['debugLevel']); ?>
 </body>
 </html>

@@ -216,7 +216,7 @@ class Esmtp{
 		$this->sWrite($this->fp,"MAIL FROM:<".$this->getRealAddr($this->from).">\r\n");
 		$this->sRead($this->fp);
 		if(!is_array($rcpt_to)){
-			$rcpt_to = split(",",$rcpt_to);
+			$rcpt_to = explode(",",$rcpt_to);
 		}
 		foreach($rcpt_to as $cell){
 			$cell = trim($cell);
@@ -273,7 +273,7 @@ class Esmtp{
 	 * マルチバイトをエンコードして、メールを送信する
 	 */
 	public function mb_send($rcpt_to,$subject,$body,$ex_header=""){
-		$aryExHeader = split("\r\n",$ex_header);
+		$aryExHeader = explode("\r\n",$ex_header);
 		$outExHeader = "";
 		$this->log .= "----- Start mb_send() -----\n";
 		foreach($aryExHeader as $value){

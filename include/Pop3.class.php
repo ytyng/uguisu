@@ -275,7 +275,7 @@ class pop3
 		$line = trim(fgets($this->_sock, 512));
 		$this->_debug('< ' . $line . "\n");
 
-		$tmp = split(' ', $line, 2);
+		$tmp = explode(' ', $line, 2);
 		if (isset($tmp[1])) {
 			$resp = $tmp[1];
 		} else {
