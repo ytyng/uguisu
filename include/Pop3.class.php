@@ -87,7 +87,8 @@ class pop3
 			return FALSE;
 		}
 
-		if (ereg("<.+>", $resp, $match)) {
+		#if (ereg("<.+>", $resp, $match)) {
+		if (preg_match("/<.+>/", $resp, $match)) {
 			$time_stamp = $match[0];
 		} else {
 			$time_stamp = '';
@@ -299,7 +300,8 @@ class pop3
 		$response = '';
 		$line = '';
 		while ($line != ".\r\n") {
-			$line = ereg_replace("^\\.\\.", '.', $line);
+			//$line = ereg_replace("^\\.\\.", '.', $line);
+			$line = preg_replace("/^\\.\\./", '.', $line);
 			$response .= $line;
 			$line = fgets($this->_sock, 512);
 		}
