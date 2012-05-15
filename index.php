@@ -11,6 +11,7 @@ header('Content-Type: text/html; charset='.BASE_ENCODING);
 <head>
 <title>Uguisu</title>
 <link rel="shortcut icon" href="image/favicon.ico" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0" />
 </head>
 <frameset cols="200px,*">
 	<frame src="pane/account-list.php" name="paneLeft" id="paneLeft">

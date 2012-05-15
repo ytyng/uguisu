@@ -337,13 +337,16 @@ function dateHumanReadable($d){
  * 自動リンク
  */
 function autoLink($text){
-	$text = ereg_replace(
-		"(https?|ftp)(://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)",
-		"<a class=\"linkthumb\" href=\"\\1\\2\" target=\"_blank\">\\1\\2</a>",
+	$result = preg_replace(
+		"/(https?|ftp)(\:\/\/[\w\+\$\;\?\.\%\,\!\#\~\*\/\:\@\&\=\_\-]+)/",
+		"<a class=\"autolink\" href=\"\\1\\2\" target=\"_blank\">\\1\\2</a>",
 		$text
 	);
-	return $text;
+	return $result;
 }
+
+
+
 echo "<div id=\"footer\">";	
 echo "<a href=\"./\">Top</a>\n";
 echo "</div>\n";
